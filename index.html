@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q & G - Revenda de Produtos para Cabelo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Cabeçalho -->
+  <header class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <img src="assets/logo.png" alt="Logo Q & G" class="logo-size">
+      <nav class="space-x-6 hidden md:block">
+        <a href="#home" class="hover:text-gold">Home</a>
+        <a href="#sobre" class="hover:text-gold">Sobre Nós</a>
+        <a href="#produtos" class="hover:text-gold">Produtos</a>
+        <a href="#marcas" class="hover:text-gold">Marcas</a>
+        <a href="#contato" class="hover:text-gold">Contato</a>
+      </nav>
+      <a href="#contato" class="bg-gold text-white px-4 py-2 rounded-lg shadow hover:opacity-90">Solicitar Catálogo</a>
+    </div>
+  </header>
+
+  <!-- Hero
+  <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center" 
+    style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');">
+    <div class="bg-white bg-opacity-80 p-10 rounded-xl text-center shadow-lg">
+      <h2 class="text-4xl font-bold gold">Produtos Premium para Cabelos</h2>
+      <p class="mt-4 text-lg">Revenda especializada para salões que prezam por qualidade e confiança.</p>
+      <a href="#produtos" class="mt-6 inline-block bg-gold text-white px-6 py-3 rounded-lg shadow-lg">Conheça Nossos Produtos</a>
+    </div>
+  </section> -->
+  <!-- Hero -->
+  <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center" 
+    style="background-image: url('img/produtos.png');">
+    <div class="bg-white bg-opacity-80 p-10 rounded-xl text-center shadow-lg">
+      <h2 class="text-4xl font-bold gold">Produtos Premium para Cabelos</h2>
+      <p class="mt-4 text-lg">Revenda especializada para salões que prezam por qualidade e confiança.</p>
+      <a href="#produtos" class="mt-6 inline-block bg-gold text-white px-6 py-3 rounded-lg shadow-lg">Conheça Nossos Produtos</a>
+    </div>
+  </section>
+
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-16 container mx-auto px-6">
+    <h3 class="text-3xl font-bold gold mb-6">Sobre Nós</h3>
+    <p class="text-lg leading-relaxed">
+      A <strong>Q & G</strong> é uma distribuidora especializada em <strong>produtos para cabelo</strong>,
+      oferecendo as melhores marcas do mercado para salões de beleza. Nossa missão é levar 
+      <span class="gold">excelência, inovação e confiança</span> para profissionais da beleza capilar.
+    </p>
+  </section>
+
+  <!-- Produtos -->
+  <section id="produtos" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold gold mb-6">Linha de Produtos para Cabelo</h3>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white shadow rounded-lg p-6 text-center">
+          <img src="assets/produto1.jpg" alt="Shampoo" class="w-full h-40 object-cover rounded">
+          <h4 class="mt-4 font-semibold">Shampoo Profissional</h4>
+          <p>Limpeza suave e hidratação intensa.</p>
+        </div>
+        <div class="bg-white shadow rounded-lg p-6 text-center">
+          <img src="assets/produto2.jpg" alt="Condicionador" class="w-full h-40 object-cover rounded">
+          <h4 class="mt-4 font-semibold">Condicionador Nutritivo</h4>
+          <p>Desembaraço fácil e brilho natural.</p>
+        </div>
+        <div class="bg-white shadow rounded-lg p-6 text-center">
+          <img src="assets/produto3.jpg" alt="Máscara Capilar" class="w-full h-40 object-cover rounded">
+          <h4 class="mt-4 font-semibold">Máscara de Tratamento</h4>
+          <p>Recuperação profunda dos fios.</p>
+        </div>
+        <div class="bg-white shadow rounded-lg p-6 text-center">
+          <img src="assets/produto4.jpg" alt="Óleo Capilar" class="w-full h-40 object-cover rounded">
+          <h4 class="mt-4 font-semibold">Óleo Capilar</h4>
+          <p>Nutrição, maciez e controle de frizz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marcas -->
+  <section id="marcas" class="py-16 container mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold gold mb-6">Marcas Parceiras</h3>
+    <p>Trabalhamos apenas com marcas premium do setor capilar.</p>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold gold mb-6">Fale Conosco</h3>
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Nome" class="p-3 rounded border">
+        <input type="email" placeholder="E-mail" class="p-3 rounded border">
+        <input type="text" placeholder="Telefone" class="p-3 rounded border md:col-span-2">
+        <textarea placeholder="Mensagem" class="p-3 rounded border md:col-span-2"></textarea>
+        <button type="submit" class="bg-gold text-white px-6 py-3 rounded-lg shadow-lg md:col-span-2">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-white py-6 text-center shadow-inner">
+    <p class="text-gray-600">&copy; 2025 Q & G - Todos os direitos reservados.</p>
+    <div class="mt-2 space-x-4">
+      <a href="#" class="hover:text-gold">Instagram</a>
+      <a href="#" class="hover:text-gold">Facebook</a>
+      <a href="#" class="hover:text-gold">WhatsApp</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* Cores padrão */
+.gold { color: #c8a951; }
+.bg-gold { background-color: #c8a951; }
+
+/* Configuração do logo */
+:root {
+  --logo-size: 150px; /* ajuste aqui o tamanho do logo */
+}
+
+.logo-size {
+  height: var(--logo-size);
+  width: auto;
+}

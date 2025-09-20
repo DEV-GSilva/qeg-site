@@ -93,22 +93,58 @@
   <section id="contato" class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
       <h3 class="text-3xl font-bold gold mb-6">Fale Conosco</h3>
-      <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <input type="text" placeholder="Nome" class="p-3 rounded border">
-        <input type="email" placeholder="E-mail" class="p-3 rounded border">
-        <input type="text" placeholder="Telefone" class="p-3 rounded border md:col-span-2">
-        <textarea placeholder="Mensagem" class="p-3 rounded border md:col-span-2"></textarea>
+      <form id="formContato" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input id="nome" type="text" placeholder="Nome" class="p-3 rounded border">
+        <input id="email" type="email" placeholder="E-mail" class="p-3 rounded border">
+        <input id="telefone" type="text" placeholder="Telefone" class="p-3 rounded border md:col-span-2">
+        <textarea id="mensagem" placeholder="Mensagem" class="p-3 rounded border md:col-span-2"></textarea>
         <button type="submit" class="bg-gold text-white px-6 py-3 rounded-lg shadow-lg md:col-span-2">Enviar</button>
       </form>
     </div>
   </section>
+  
+  <!-- Biblioteca IMask -->
+  <script src="https://unpkg.com/imask"></script>
+  
+  <script>
+    // Máscara de telefone
+    var telefone = document.getElementById('telefone');
+    var maskOptions = {
+      mask: [
+        { mask: '(00) 0000-0000' },
+        { mask: '(00) 00000-0000' }
+      ]
+    };
+    var mask = IMask(telefone, maskOptions);
+  
+    // Envio para WhatsApp
+    document.getElementById("formContato").addEventListener("submit", function(e) {
+      e.preventDefault(); // evita reload da página
+  
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const telefone = document.getElementById("telefone").value;
+      const mensagem = document.getElementById("mensagem").value;
+  
+      const texto = 
+        "Nome: " + nome + "%0A" +
+        "E-mail: " + email + "%0A" +
+        "Telefone: " + telefone + "%0A" +
+        "Mensagem: " + mensagem;
+  
+      // coloque aqui o número da empresa no formato internacional
+      const numeroWhats = "5511997400298"; 
+  
+      const url = "https://wa.me/" + numeroWhats + "?text=" + texto;
+  
+      window.open(url, "_blank");
+    });
+  </script>
 
   <!-- Rodapé -->
   <footer class="bg-white py-6 text-center shadow-inner">
     <p class="text-gray-600">&copy; 2025 Q & G - Todos os direitos reservados.</p>
     <div class="mt-2 space-x-4">
-      <a href="#" class="hover:text-gold">Instagram</a>
-      <a href="#" class="hover:text-gold">Facebook</a>
       <a href="#" class="hover:text-gold">WhatsApp</a>
     </div>
   </footer>
